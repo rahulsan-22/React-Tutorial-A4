@@ -100,23 +100,36 @@
 // export default App
 
 //!25/08/2026 (Lifecycle Methods)
-import FallbackUI from './Lifecycle/FallbackUI'
-import Phases from './Lifecycle/Phases'
-import Welcome from './Lifecycle/Welcome'
+// import FallbackUI from './Lifecycle/FallbackUI'
+// import Phases from './Lifecycle/Phases'
+// import Welcome from './Lifecycle/Welcome'
+
+// const App = () => {
+//   return <>
+//     {/* <Phases /> */}
+//     <FallbackUI>
+//       <Welcome trainer="Yasin" />
+//     </FallbackUI>
+//     <FallbackUI>
+//       <Welcome trainer="Monty" />
+//     </FallbackUI>
+//     <FallbackUI>
+//       <Welcome trainer="Pavan" />
+//     </FallbackUI>
+//   </>
+// }
+
+// export default App
+
+//!26/08/2026 (useState)
+import Counter from './useState/Counter'
 
 const App = () => {
-  return <>
-    {/* <Phases /> */}
-    <FallbackUI>
-      <Welcome trainer="Yasin" />
-    </FallbackUI>
-    <FallbackUI>
-      <Welcome trainer="Monty" />
-    </FallbackUI>
-    <FallbackUI>
-      <Welcome trainer="Pavan" />
-    </FallbackUI>
-  </>
+  return (
+    <div>
+      <Counter/>
+    </div>
+  )
 }
 
 export default App
