@@ -122,12 +122,135 @@
 // export default App
 
 //!26/08/2026 (useState)
-import Counter from './useState/Counter'
+// import Counter from './useState/Counter'
+// import Food from './useState/Food'
+// import Rakhi from './useState/Rakhi'
+// import Salary from './useState/Salary'
+// import Theme from './useState/Theme'
+// import User from './useState/User'
 
+// const App = () => {
+//   return (
+//     <div>
+//       <Counter />
+//       <Food />
+//       <Theme />
+//       <Rakhi />
+//       <User />
+//       <Salary/>
+//     </div>
+//   )
+// }
+
+// export default App
+
+//!29/08/2026 (useEffect)
+// import Effect from './useEffect/Effect'
+
+// const App = () => {
+//   return <Effect/>
+// }
+
+// export default App
+
+//!31/08/2026 (useContext)
+// import Malakpet from './useContext/Malakpet'
+// import { GulabJamunContext, IcecreamContext, ItemContext } from './useContext/Zepto'
+
+// const App = () => {
+//   let products = {
+//     biscuit: "Jim-Jam",
+//     chips: ["Bingo", "Lays", "Kurkure", "SoyaSticks"],
+//     softDrinks: () => "Coke",
+//     chocolate: {
+//       choco1:"5 Star",
+//       choco2:"Munch"
+//     }
+//   }
+//   return (
+//     <IcecreamContext.Provider value='Chocolate'>
+//       <GulabJamunContext value="Gulab Jamun">
+//         <ItemContext.Provider value={products}>
+//           <Malakpet/>
+//         </ItemContext.Provider>
+//       </GulabJamunContext>
+//     </IcecreamContext.Provider>
+//   )
+// }
+// export default App
+
+//!01/09/2026 (useRef)
+// import Reference from './useRef/Reference'
+
+// const App = () => {
+//   return (
+//     <div>
+//       <Reference/>
+//     </div>
+//   )
+// }
+
+// export default App
+
+//!02/09/2026 (useMemo)
+// import AgeSalary from './useMemo/AgeSalary'
+
+// const App = () => {
+//   return (
+//     <div>
+//       <AgeSalary/>
+//     </div>
+//   )
+// }
+
+// export default App
+
+//!02/09/2026 (useCallback)
+// import { useCallback, useState } from 'react'
+// import Title from './useCallback/Title'
+// import Count from './useCallback/Count'
+// import Button from './useCallback/Button'
+
+// const App = () => {
+//   let [age, setAge] = useState(22)
+//   let [salary, setSalary] = useState(10000)
+//   let handleAge = useCallback(() => {
+//     setAge(age + 1)
+//   }, [age])
+//   let handleSalary = useCallback(() => {
+//     setSalary(salary + 5000)
+//   }, [salary])
+//   return (
+//     <div>
+//       <Title />
+//       <Count text="Age" data={age} />
+//       <Button text="Age" fun={handleAge} />
+//       <Count text="Salary" data={salary} />
+//       <Button text="Salary" fun={handleSalary} />
+//     </div>
+//   )
+// }
+
+// export default App
+
+//!04/09/2026 (Addig Styles)
+import Global from './AddingStyles/Global'
+import Header from './AddingStyles/Header'
+import Inline from './AddingStyles/Inline'
+import Navbar from './AddingStyles/Navbar'
+import Tailwind from './AddingStyles/Tailwind'
+// import "./Global.css"
 const App = () => {
   return (
     <div>
-      <Counter/>
+      {/* <Inline /> */}
+      {/* <hr /> */}
+      {/* <Global /> */}
+      {/* <hr /> */}
+      {/* <Navbar /> */}
+      {/* <Header /> */}
+      {/* <hr /> */}
+      <Tailwind/>
     </div>
   )
 }
