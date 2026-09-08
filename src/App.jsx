@@ -234,25 +234,34 @@
 // export default App
 
 //!04/09/2026 (Addig Styles)
-import Global from './AddingStyles/Global'
-import Header from './AddingStyles/Header'
-import Inline from './AddingStyles/Inline'
-import Navbar from './AddingStyles/Navbar'
-import Tailwind from './AddingStyles/Tailwind'
-// import "./Global.css"
+// import Global from './AddingStyles/Global'
+// import Header from './AddingStyles/Header'
+// import Inline from './AddingStyles/Inline'
+// import Navbar from './AddingStyles/Navbar'
+// import Tailwind from './AddingStyles/Tailwind'
+// // import "./Global.css"
+// const App = () => {
+//   return (
+//     <div>
+//       {/* <Inline /> */}
+//       {/* <hr /> */}
+//       {/* <Global /> */}
+//       {/* <hr /> */}
+//       {/* <Navbar /> */}
+//       {/* <Header /> */}
+//       {/* <hr /> */}
+//       <Tailwind/>
+//     </div>
+//   )
+// }
+
+// export default App
+
+//!08/09/2026 (Controlled Components)
+import ControlledForms from './FormHandling/ControlledForms'
+
 const App = () => {
-  return (
-    <div>
-      {/* <Inline /> */}
-      {/* <hr /> */}
-      {/* <Global /> */}
-      {/* <hr /> */}
-      {/* <Navbar /> */}
-      {/* <Header /> */}
-      {/* <hr /> */}
-      <Tailwind/>
-    </div>
-  )
+  return <ControlledForms/>
 }
 
 export default App
