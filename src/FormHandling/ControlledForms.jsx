@@ -118,10 +118,19 @@
 
 
 //!React Hook Form (Library)
+import { yupResolver } from '@hookform/resolvers/yup'
 import { useForm } from 'react-hook-form'
+import * as yup from "yup"
 
 const ControlledForms = () => {
-  let { register, handleSubmit } = useForm()
+  const schema = yup.object({
+    name: yup.string().required("Name is Required").min(3, "Minimum of 3 characters required").max(10, "Maximum of 10 characters allowed"),
+    email: yup.string().required("Email is required").email("Invalid Email Format")
+  })
+  let { register, handleSubmit, formState: { errors } } = useForm({
+    resolver: yupResolver(schema)
+  })
+  console.log(errors)
   let formData = (data) => {
     console.log(data)
   }
@@ -131,10 +140,10 @@ const ControlledForms = () => {
         <legend>Registration Form 🔥</legend>
         <label htmlFor="name">Name:</label>
         <input type="text" id="name" {...register("name")} />
-        <br /><br />
+        <p style={{ color: "red" }}>{errors?.name?.message}</p>
         <label htmlFor="email">Email:</label>
         <input type="email" id="email" {...register("email")} />
-        <br /><br />
+        <p style={{ color: "red" }}>{errors?.email?.message}</p>
         <label htmlFor="password">Password:</label>
         <input type="password" id="password" {...register("password")} />
         <br /><br />
@@ -145,7 +154,7 @@ const ControlledForms = () => {
         <input type="date"  {...register("date")} />
         <input type="time"  {...register("time")} />
         <input type="week"  {...register("week")} />
-        <input type="month" {...register("month")}  />
+        <input type="month" {...register("month")} />
         <input type="datetime-local" {...register("datetime")} />
         <br /><br />
         <label htmlFor="phone">Phone:</label>

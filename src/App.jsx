@@ -258,10 +258,34 @@
 // export default App
 
 //!08/09/2026 (Controlled Components)
-import ControlledForms from './FormHandling/ControlledForms'
+// import ControlledForms from './FormHandling/ControlledForms'
+
+// const App = () => {
+//   return <ControlledForms/>
+// }
+
+// export default App
+
+//!12/09/2026 (Axios)
+// import FetchData from './Axios/FetchData'
+
+// const App = () => {
+//   return <FetchData/>
+// }
+
+// export default App
+
+//!16/09/2026 (Pure Components)
+import Regular from './PureComponents/Regular'
+import Pure from './PureComponents/Pure'
 
 const App = () => {
-  return <ControlledForms/>
+  return (
+    <div>
+      <Regular />
+      <Pure/>
+    </div>
+  )
 }
 
 export default App
