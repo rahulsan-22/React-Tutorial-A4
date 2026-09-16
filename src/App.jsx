@@ -276,14 +276,50 @@
 // export default App
 
 //!16/09/2026 (Pure Components)
-import Regular from './PureComponents/Regular'
-import Pure from './PureComponents/Pure'
+// import Regular from './PureComponents/Regular'
+// import Pure from './PureComponents/Pure'
+
+// const App = () => {
+//   return (
+//     <div>
+//       <Regular />
+//       <Pure/>
+//     </div>
+//   )
+// }
+
+// export default App
+
+//!Memo
+// import NormalComp from './Memo/NormalComp'
+// import MemoComp from './Memo/MemoComp'
+// import { useState } from 'react'
+
+// const App = () => {
+//   let [name, setName] = useState({
+//     person:"Yasin"
+//   })
+//   return (
+//     <div>
+//       <NormalComp tname={name.person} />
+//       <MemoComp tname={name.person} />
+//       <button onClick={()=>setName({person:"Pavan"})}>Change Name</button>
+//     </div>
+//   )
+// }
+
+// export default App
+
+//!Portals
+import Sample from './Portals/Sample'
+import Portal from './Portals/Portal'
 
 const App = () => {
   return (
     <div>
-      <Regular />
-      <Pure/>
+      <Sample />
+      <hr />
+      <Portal/>
     </div>
   )
 }
