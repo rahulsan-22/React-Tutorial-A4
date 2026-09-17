@@ -311,15 +311,34 @@
 // export default App
 
 //!Portals
-import Sample from './Portals/Sample'
-import Portal from './Portals/Portal'
+// import Sample from './Portals/Sample'
+// import Portal from './Portals/Portal'
+
+// const App = () => {
+//   return (
+//     <div>
+//       <Sample />
+//       <hr />
+//       <Portal/>
+//     </div>
+//   )
+// }
+
+// export default App
+
+//!17/09/2026 (Custom Hooks)
+import CounterA from './CustomHooks/CounterA'
+import CounterB from './CustomHooks/CounterB'
+import FetchData from './CustomHooks/FetchData'
+import ProductsData from './CustomHooks/ProductsData'
 
 const App = () => {
   return (
     <div>
-      <Sample />
-      <hr />
-      <Portal/>
+      <CounterA/>
+      <CounterB />
+      <FetchData/>
+      <ProductsData/>
     </div>
   )
 }
