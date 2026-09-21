@@ -327,19 +327,57 @@
 // export default App
 
 //!17/09/2026 (Custom Hooks)
-import CounterA from './CustomHooks/CounterA'
-import CounterB from './CustomHooks/CounterB'
-import FetchData from './CustomHooks/FetchData'
-import ProductsData from './CustomHooks/ProductsData'
+// import CounterA from './CustomHooks/CounterA'
+// import CounterB from './CustomHooks/CounterB'
+// import FetchData from './CustomHooks/FetchData'
+// import ProductsData from './CustomHooks/ProductsData'
+
+// const App = () => {
+//   return (
+//     <div>
+//       <CounterA/>
+//       <CounterB />
+//       <FetchData/>
+//       <ProductsData/>
+//     </div>
+//   )
+// }
+
+// export default App
+
+//!18/09/2026 (Router)
+import { Route, Routes } from 'react-router-dom'
+import Home from './Router/Home'
+import About from './Router/About'
+import Contact from './Router/Contact'
+import NotFound from './Router/NotFound'
+import Navbar from './Router/Navbar'
+import Student from './Router/Student'
+import Login from './Router/Login'
+import Dashboard from './Router/Dashboard'
+import ProtectedRoute from './Router/ProtectedRoute'
+import JobPortal from './Router/JobPortal'
+import Applications from './Router/Applications'
+import RejectedOffers from './Router/RejectedOffers'
 
 const App = () => {
   return (
-    <div>
-      <CounterA/>
-      <CounterB />
-      <FetchData/>
-      <ProductsData/>
-    </div>
+    <>
+      <Navbar />
+      <Routes>
+        <Route path='/' element={<Home />} />
+        <Route path='/about' element={<About />} />
+        <Route path='/contact' element={<Contact />} />
+        <Route path='/student/:id/:name/:mail' element={<Student />} />
+        <Route path='/login' element={<Login />} />
+        <Route path='/dashboard' element={<ProtectedRoute><Dashboard /></ProtectedRoute>}>
+          <Route path='/dashboard/jobportal' element={<JobPortal/>} />
+          <Route path='/dashboard/applications' element={<Applications/>} />
+          <Route path='/dashboard/rejectedoffers' element={<RejectedOffers/>} />
+        </Route>
+        <Route path='*' element={<NotFound />} />
+      </Routes>
+    </>
   )
 }
 
