@@ -347,6 +347,7 @@
 
 //!18/09/2026 (Router)
 import { Route, Routes } from 'react-router-dom'
+import { lazy, Suspense } from 'react'
 import Home from './Router/Home'
 import About from './Router/About'
 import Contact from './Router/Contact'
@@ -354,31 +355,36 @@ import NotFound from './Router/NotFound'
 import Navbar from './Router/Navbar'
 import Student from './Router/Student'
 import Login from './Router/Login'
-import Dashboard from './Router/Dashboard'
 import ProtectedRoute from './Router/ProtectedRoute'
+import Dashboard from './Router/Dashboard'
 import JobPortal from './Router/JobPortal'
 import Applications from './Router/Applications'
 import RejectedOffers from './Router/RejectedOffers'
+// const Dashboard = lazy(() => import('./Router/Dashboard'))
+// const JobPortal = lazy(() => import('./Router/JobPortal'))
+// const Applications = lazy(() => import('./Router/Applications'))
+// const RejectedOffers = lazy(() => import('./Router/RejectedOffers'))
 
 const App = () => {
   return (
     <>
       <Navbar />
-      <Routes>
-        <Route path='/' element={<Home />} />
-        <Route path='/about' element={<About />} />
-        <Route path='/contact' element={<Contact />} />
-        <Route path='/student/:id/:name/:mail' element={<Student />} />
-        <Route path='/login' element={<Login />} />
-        <Route path='/dashboard' element={<ProtectedRoute><Dashboard /></ProtectedRoute>}>
-          <Route path='/dashboard/jobportal' element={<JobPortal/>} />
-          <Route path='/dashboard/applications' element={<Applications/>} />
-          <Route path='/dashboard/rejectedoffers' element={<RejectedOffers/>} />
-        </Route>
-        <Route path='*' element={<NotFound />} />
-      </Routes>
+      <Suspense fallback=<h1>Loading....</h1>>
+        <Routes>
+          <Route path='/' element={<Home />} />
+          <Route path='/about' element={<About />} />
+          <Route path='/contact' element={<Contact />} />
+          <Route path='/student/:id/:name/:mail' element={<Student />} />
+          <Route path='/login' element={<Login />} />
+          <Route path='/dashboard' element={<ProtectedRoute><Dashboard /></ProtectedRoute>}>
+            <Route path='/dashboard/jobportal' element={<JobPortal />} />
+            <Route path='/dashboard/applications' element={<Applications />} />
+            <Route path='/dashboard/rejectedoffers' element={<RejectedOffers />} />
+          </Route>
+          <Route path='*' element={<NotFound />} />
+        </Routes>
+      </Suspense>
     </>
   )
 }
-
 export default App
